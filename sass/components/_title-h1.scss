@@ -1,0 +1,5 @@
+.title-h1 {
+  @include font-s-w-lh-ls($s: 48, $w: 700, $lh: 56, $ls: 0.05);
+  font-family: "raleway";
+  color: #ffffff;
+}

@@ -1,0 +1,13 @@
+.pre-title-master {
+  @include font-s-w-lh-ls(11, 600, 15, 0.1);
+  position: relative;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title-slave {
+  @include font-s-w-lh-ls(11, 600, 15, 0.1);
+  position: relative;
+  text-transform: uppercase;
+  color: #303030;
+}

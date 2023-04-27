@@ -1,0 +1,167 @@
+header {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+}
+
+.header-wrapper {
+  position: relative;
+  //outline: 1px solid green;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and(min-width:768px) {
+    width: 690px;
+    padding: 0 20px;
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 1170px;
+    padding: 0 5px;
+  }
+}
+
+.burger-icon {
+  display: inline-flex;
+  fill: $white;
+  cursor: pointer;
+
+  transition: fill 300ms linear;
+
+  &:hover,
+  &:focus {
+    fill: $primary-bright;
+  }
+
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+// формат таблетки и больше
+
+.header {
+  display: none;
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__navigation {
+  margin-right: 35px;
+
+  @media screen and(min-width:1200px) {
+    margin-right: 254px;
+  }
+}
+
+.header__navigation-list {
+  display: flex;
+
+  li {
+    display: flex;
+  }
+
+  li:not(:last-child) {
+    margin-right: 16px;
+
+    @media screen and(min-width:1200px) {
+      margin-right: 30px;
+    }
+  }
+
+  a {
+    padding: 20px 0;
+    @include font-s-w-lh-ls(12, 600, 16, 0.1);
+    color: $white;
+
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+  }
+}
+
+.header__contacts {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and(min-width:1200px) {
+    position: static;
+    flex-direction: row;
+  }
+
+  .header__phone-link {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    padding: 10px 0;
+
+    @include font-s-w-lh-ls(12, 600, 16, 0.1);
+    color: $white;
+
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+
+    @media screen and(min-width:1200px) {
+      position: static;
+      align-self: center;
+
+      margin-right: 40px;
+    }
+  }
+}
+
+.header__socials-list {
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 400px;
+  left: -45px;
+
+  display: flex;
+
+  .header__socials-item {
+    display: flex;
+  }
+
+  .header__socials-item:last-child {
+    margin-left: 40px;
+  }
+
+  .header__socials-link {
+    @include font-s-w-lh-ls(11, 600, 15, 0.2);
+    color: $primary-dark;
+    padding: 20px 0;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -80px;
+    top: 26px;
+    height: 2px;
+    width: 60px;
+    background-color: currentColor;
+  }
+}

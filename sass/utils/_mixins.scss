@@ -1,0 +1,17 @@
+@mixin font-s-w-lh-ls($s: 14, $w: 400, $lh: 25, $ls: 0.2) {
+  // null как аргумент приведет к отсутствию строки "свойство: значение";
+  // $s:14px - значение по умолчанию, чтобы его перебить надо указать
+  // новое значение в том же формате. остальные не упоминать;
+  font-size: $s + px;
+  font-weight: $w;
+  line-height: $lh / $s;
+  letter-spacing: $ls + em;
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

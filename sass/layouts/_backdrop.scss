@@ -1,0 +1,174 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 36, 0.7);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 500px;
+  padding: 42px 10px;
+
+  background-color: $white-secondary;
+  border-radius: 3px;
+}
+
+.modal__button {
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover .close-icon,
+  &:focus .close-icon {
+    fill: $primary-bright;
+  }
+}
+
+.close-icon {
+  display: block;
+
+  fill: $primary-dark;
+  background-color: transparent;
+
+  transition: fill 200ms linear;
+}
+
+.modal__title-h2--dark {
+  text-align: center;
+}
+
+// мобильное меню ниже
+
+.js-menu-container.is-open {
+  transform: translateX(0);
+
+  & .js-menu-container__backdrop {
+    opacity: 1;
+    transition: opacity 300ms linear 300ms;
+  }
+}
+
+.js-menu-container {
+  position: fixed;
+  top: 0;
+  left: 20vw;
+  width: 80vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 120px 40px;
+
+  background-color: $white-secondary;
+  z-index: 999;
+  transform: translateX(100vw);
+  transition: transform 250ms ease-in-out;
+
+  & .modal__button {
+    top: 30px;
+    right: 36px;
+  }
+}
+
+.js-menu-container__navigation {
+  margin-bottom: 64px;
+
+  li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  a {
+    display: block;
+    @include font-s-w-lh-ls(18, 600, 25, 0.1);
+    color: #303030;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+  }
+}
+
+.js-menu-container__contacts {
+  margin-bottom: auto;
+
+  a {
+    display: block;
+    margin-bottom: 24px;
+
+    @include font-s-w-lh-ls(18, 600, 25, 0.1);
+    color: #303030;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+  }
+}
+
+.js-menu-container__button {
+  padding: 12px 37px;
+}
+
+.js-menu-container__socials-list {
+  margin-left: 100px;
+
+  li:first-child {
+    margin-bottom: 24px;
+  }
+
+  a {
+    display: block;
+    @include font-s-w-lh-ls(14, 600, 19, 0.2);
+    color: #303030;
+
+    &:hover,
+    &:focus {
+      color: $primary-bright;
+    }
+  }
+}
+
+.js-menu-container__socials-item:first-child {
+  position: relative;
+  margin-right: 40px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -100px;
+    top: 8px;
+    height: 1px;
+    width: 60px;
+    background-color: currentColor;
+  }
+}
+
+.js-menu-container__backdrop {
+  position: fixed;
+  transform: translateX(-100%);
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100%;
+  background-color: rgba(23, 26, 36, 0.7);
+
+  opacity: 0;
+}

@@ -1,1 +1,1 @@
-# Barbershop
+# goit-barbershop

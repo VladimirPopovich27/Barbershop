@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  padding: 12px 20px;
+  border: 1px solid $primary-bright;
+  border-radius: 25px;
+  background-color: transparent;
+
+  @include font-s-w-lh-ls(12, 600, 16, 0.09);
+  text-transform: uppercase;
+  color: #303030;
+
+  transition: background-color 200ms linear, color 300ms linear;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $primary-bright;
+  }
+  &:active {
+    background-color: $primary-bright-active;
+  }
+}
+
+.button--on-dark {
+  color: $white;
+}

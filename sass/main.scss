@@ -1,0 +1,24 @@
+@import "./base/defaults";
+@import "./base/vars";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/utils";
+
+@import "./components/logo";
+@import "./components/button";
+@import "./components/pre-title";
+@import "./components/title-h1";
+@import "./components/title-h2";
+@import "./components/title-h3";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/prices";
+@import "./layouts/benefits";
+@import "./layouts/masters";
+@import "./layouts/history-note";
+@import "./layouts/contacts";
+@import "./layouts/footer";
+
+@import "./layouts/backdrop";
